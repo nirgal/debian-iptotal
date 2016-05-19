@@ -1,3 +1,2 @@
-debian/apache.conf /etc/iptotal/
 debian/iptotal/var/lib/iptotal/template.html /usr/share/iptotal/www/
 debian/iptotal/var/lib/iptotal/images/ /usr/share/iptotal/www/

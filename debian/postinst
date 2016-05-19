@@ -47,7 +47,13 @@ case "$1" in
         done
 
         # change ownership to www-data
-	    chown -R www-data:www-data /var/lib/iptotal/*
+        chown -R www-data:www-data /var/lib/iptotal/*
+
+        # enable cgi
+        if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+            . /usr/share/apache2/apache2-maintscript-helper
+            apache2_invoke enmod cgi
+        fi
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
